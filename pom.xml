@@ -17,8 +17,6 @@
     <properties>
         <java.version>17</java.version>
         <itext.version>5.5.13.3</itext.version>
-        <httpclient.version>5.3.1</httpclient.version>
-        <httpcore.version>5.3.1</httpcore.version>
     </properties>
 
     <dependencies>
@@ -54,21 +52,10 @@
             <version>${itext.version}</version>
         </dependency>
 
-        <!-- HTTP Client Dependencies - VOLLSTÄNDIG -->
+        <!-- HTTP Client Dependencies - CORRECTED -->
         <dependency>
             <groupId>org.apache.httpcomponents.client5</groupId>
             <artifactId>httpclient5</artifactId>
-            <version>${httpclient.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents.core5</groupId>
-            <artifactId>httpcore5</artifactId>
-            <version>${httpcore.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents.core5</groupId>
-            <artifactId>httpcore5-h2</artifactId>
-            <version>${httpcore.version}</version>
         </dependency>
 
         <!-- JSON Processing (Must-Have: JSON serialization) -->
