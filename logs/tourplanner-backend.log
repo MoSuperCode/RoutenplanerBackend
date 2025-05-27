@@ -3387,3 +3387,639 @@
     order by
         tl1_0.date desc
 2025-05-27 22:46:53 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 22:54:32 [http-nio-8080-exec-9] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 22:54:32 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 22:54:32 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 22:54:32 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 22:54:32 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 22:54:32 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 22:54:32 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 22:54:32 [http-nio-8080-exec-5] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 22:54:32 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 22:54:32 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 22:54:32 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 22:54:32 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 22:54:32 [http-nio-8080-exec-8] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 22:54:32 [http-nio-8080-exec-8] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 22:54:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 22:54:32 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 22:54:32 [http-nio-8080-exec-8] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 22:54:32 [http-nio-8080-exec-10] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 22:54:32 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 22:54:32 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 22:54:32 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 22:54:32 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:00:11 [http-nio-8080-exec-7] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:00:11 [http-nio-8080-exec-7] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:00:11 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:00:11 [http-nio-8080-exec-7] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 23:00:11 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:00:11 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:00:11 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:00:11 [http-nio-8080-exec-3] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:00:11 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:00:11 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:00:11 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:00:11 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:00:11 [http-nio-8080-exec-6] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:00:11 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:00:11 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:00:11 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:00:11 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:00:11 [http-nio-8080-exec-2] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 23:00:11 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 23:00:11 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:00:11 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:00:11 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:03:18 [http-nio-8080-exec-8] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:03:18 [http-nio-8080-exec-8] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:03:18 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:03:18 [http-nio-8080-exec-8] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 23:03:18 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:03:18 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:03:18 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:03:19 [http-nio-8080-exec-10] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:03:19 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:03:19 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:03:19 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:03:19 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:03:19 [http-nio-8080-exec-4] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:03:19 [http-nio-8080-exec-4] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:03:19 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:03:19 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:03:19 [http-nio-8080-exec-4] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:03:19 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 23:03:19 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 23:03:19 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:03:19 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:03:19 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:06:15 [http-nio-8080-exec-6] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:06:15 [http-nio-8080-exec-6] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:06:15 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:06:15 [http-nio-8080-exec-6] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 23:06:15 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:06:15 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:06:15 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:06:15 [http-nio-8080-exec-2] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:06:15 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:06:15 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:06:15 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:06:15 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:06:15 [http-nio-8080-exec-9] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:06:15 [http-nio-8080-exec-9] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:06:15 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:06:15 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:06:15 [http-nio-8080-exec-9] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:06:15 [http-nio-8080-exec-5] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 23:06:15 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 23:06:15 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:06:15 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:06:15 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
