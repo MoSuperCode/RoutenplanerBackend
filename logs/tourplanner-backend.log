@@ -4023,3 +4023,2948 @@
     order by
         tl1_0.date desc
 2025-05-27 23:06:15 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:14:49 [http-nio-8080-exec-4] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:14:49 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:14:49 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:14:49 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 23:14:49 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:14:49 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:14:49 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:14:49 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:14:49 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:14:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:14:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:14:50 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:14:50 [http-nio-8080-exec-3] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:14:50 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:14:50 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:14:50 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:14:50 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:14:50 [http-nio-8080-exec-7] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 23:14:50 [http-nio-8080-exec-7] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 23:14:50 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:14:50 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:14:50 [http-nio-8080-exec-7] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:15:26 [http-nio-8080-exec-9] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:15:26 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:15:26 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:15:26 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 23:15:26 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:15:26 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:15:26 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:15:26 [http-nio-8080-exec-5] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:15:26 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:15:26 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:15:26 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:15:26 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:15:26 [http-nio-8080-exec-8] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:15:26 [http-nio-8080-exec-8] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:15:26 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:15:26 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:15:26 [http-nio-8080-exec-8] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:15:26 [http-nio-8080-exec-10] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 23:15:26 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 23:15:26 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:15:26 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:15:26 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:15:47 [http-nio-8080-exec-3] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:15:47 [http-nio-8080-exec-3] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:15:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:15:47 [http-nio-8080-exec-3] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 23:15:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:15:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:15:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:15:47 [http-nio-8080-exec-7] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:15:47 [http-nio-8080-exec-7] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:15:47 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:15:47 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:15:47 [http-nio-8080-exec-7] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:15:47 [http-nio-8080-exec-2] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:15:47 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:15:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:15:47 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:15:47 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:15:47 [http-nio-8080-exec-6] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 23:15:47 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 23:15:47 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:15:47 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:15:47 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:16:01 [http-nio-8080-exec-9] INFO  o.e.t.controller.ReportController - GET /api/reports/tour/2 - Generating tour report
+2025-05-27 23:16:01 [http-nio-8080-exec-9] INFO  o.e.t.service.ReportService - Generating tour report for tour ID: 2
+2025-05-27 23:16:01 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:16:01 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:16:01 [http-nio-8080-exec-9] INFO  o.e.t.service.ReportService - Tour report generated successfully for tour: Vienna
+2025-05-27 23:20:48 [http-nio-8080-exec-4] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:20:48 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:20:48 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:20:48 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 23:20:48 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:20:48 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:20:48 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:20:48 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:20:48 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:20:48 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:20:48 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:20:48 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:20:48 [http-nio-8080-exec-3] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:20:48 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:20:48 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:20:48 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:20:48 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:20:48 [http-nio-8080-exec-7] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 23:20:48 [http-nio-8080-exec-7] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 23:20:48 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:20:48 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:20:48 [http-nio-8080-exec-7] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:20:57 [http-nio-8080-exec-2] INFO  o.e.t.controller.ReportController - GET /api/reports/summary - Generating summary report
+2025-05-27 23:20:57 [http-nio-8080-exec-2] INFO  o.e.t.service.ReportService - Generating summary report for all tours
+2025-05-27 23:20:57 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:20:57 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:20:57 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:20:57 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:20:57 [http-nio-8080-exec-2] INFO  o.e.t.service.ReportService - Summary report generated successfully for 3 tours
+2025-05-27 23:21:10 [http-nio-8080-exec-9] INFO  o.e.t.controller.ReportController - GET /api/reports/tour/2 - Generating tour report
+2025-05-27 23:21:10 [http-nio-8080-exec-9] INFO  o.e.t.service.ReportService - Generating tour report for tour ID: 2
+2025-05-27 23:21:10 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:21:10 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:21:10 [http-nio-8080-exec-9] INFO  o.e.t.service.ReportService - Tour report generated successfully for tour: Vienna
+2025-05-27 23:21:21 [http-nio-8080-exec-8] INFO  o.e.t.controller.ReportController - GET /api/reports/summary - Generating summary report
+2025-05-27 23:21:21 [http-nio-8080-exec-8] INFO  o.e.t.service.ReportService - Generating summary report for all tours
+2025-05-27 23:21:21 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:21:21 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:21:21 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:21:21 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:21:21 [http-nio-8080-exec-8] INFO  o.e.t.service.ReportService - Summary report generated successfully for 3 tours
+2025-05-27 23:22:01 [http-nio-8080-exec-3] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:22:01 [http-nio-8080-exec-3] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:22:01 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:22:01 [http-nio-8080-exec-3] INFO  o.e.t.service.TourService - Found 3 tours
+2025-05-27 23:22:01 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:22:01 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:22:01 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:22:01 [http-nio-8080-exec-7] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:22:01 [http-nio-8080-exec-7] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:22:01 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:22:01 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:22:01 [http-nio-8080-exec-7] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:22:01 [http-nio-8080-exec-2] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:22:01 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:22:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:22:01 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:22:01 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:22:01 [http-nio-8080-exec-6] INFO  o.e.t.controller.TourLogController - GET /api/tours/3/logs - Getting logs for tour
+2025-05-27 23:22:01 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 3
+2025-05-27 23:22:01 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:22:01 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:22:01 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 3
+2025-05-27 23:22:10 [http-nio-8080-exec-9] INFO  o.e.t.controller.ReportController - GET /api/reports/summary - Generating summary report
+2025-05-27 23:22:10 [http-nio-8080-exec-9] INFO  o.e.t.service.ReportService - Generating summary report for all tours
+2025-05-27 23:22:10 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:22:10 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:22:10 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:22:10 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:22:10 [http-nio-8080-exec-9] INFO  o.e.t.service.ReportService - Summary report generated successfully for 3 tours
+2025-05-27 23:22:24 [http-nio-8080-exec-8] INFO  o.e.t.controller.ReportController - GET /api/reports/tour/2 - Generating tour report
+2025-05-27 23:22:24 [http-nio-8080-exec-8] INFO  o.e.t.service.ReportService - Generating tour report for tour ID: 2
+2025-05-27 23:22:24 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:22:24 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:22:24 [http-nio-8080-exec-8] INFO  o.e.t.service.ReportService - Tour report generated successfully for tour: Vienna
+2025-05-27 23:22:54 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourLogController - POST /api/tours/2/logs - Creating new tour log
+2025-05-27 23:22:54 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Creating new log for tour ID: 2
+2025-05-27 23:22:54 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:22:54 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        tour_logs
+        (comment, created_at, date, difficulty, rating, total_distance, total_time, tour_id, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-05-27 23:22:54 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Tour log created with ID: 1
+2025-05-27 23:23:03 [http-nio-8080-exec-3] INFO  o.e.t.controller.ReportController - GET /api/reports/tour/2 - Generating tour report
+2025-05-27 23:23:03 [http-nio-8080-exec-3] INFO  o.e.t.service.ReportService - Generating tour report for tour ID: 2
+2025-05-27 23:23:03 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:23:03 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:23:03 [http-nio-8080-exec-3] INFO  o.e.t.service.ReportService - Tour report generated successfully for tour: Vienna
+2025-05-27 23:27:51 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Starting TourplannerBackendApplication using Java 22.0.2 with PID 21136 (/Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend/target/classes started by mo in /Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend)
+2025-05-27 23:27:51 [restartedMain] DEBUG o.e.t.TourplannerBackendApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-05-27 23:27:51 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 23:27:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-27 23:27:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-27 23:27:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-27 23:27:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2025-05-27 23:27:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-27 23:27:52 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 23:27:52 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-05-27 23:27:52 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 23:27:52 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 604 ms
+2025-05-27 23:27:52 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-27 23:27:52 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-27 23:27:52 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-27 23:27:52 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 7 class path changes (7 additions, 0 deletions, 0 modifications)
+2025-05-27 23:27:52 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-27 23:27:52 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-27 23:27:52 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:27:52 [Thread-5] DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2025-05-27 23:27:52 [Thread-5] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       drop constraint if exists FKjv0inmm9mr1w8axyxa2h3ya14
+2025-05-27 23:27:52 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists tour_logs cascade
+2025-05-27 23:27:52 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists tours cascade
+2025-05-27 23:27:52 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-27 23:27:52 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-27 23:27:52 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-27 23:27:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-27 23:27:52 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Starting TourplannerBackendApplication using Java 22.0.2 with PID 14432 (/Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend/target/classes started by mo in /Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend)
+2025-05-27 23:27:52 [restartedMain] DEBUG o.e.t.TourplannerBackendApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-05-27 23:27:52 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 23:27:53 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50a49a6
+2025-05-27 23:27:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-27 23:27:53 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-27 23:27:53 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-27 23:27:53 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 23:27:53 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-05-27 23:27:53 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 281 ms
+2025-05-27 23:27:53 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-27 23:27:53 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-27 23:27:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-05-27 23:27:53 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@22354bed
+2025-05-27 23:27:53 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-05-27 23:27:53 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-27 23:27:53 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-27 23:27:53 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       drop constraint if exists FKjv0inmm9mr1w8axyxa2h3ya14
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tour_logs cascade
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tours cascade
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tour_logs (
+        difficulty integer not null check ((difficulty<=10) and (difficulty>=1)),
+        rating integer not null check ((rating>=1) and (rating<=5)),
+        total_distance float(53) not null,
+        total_time integer not null,
+        created_at timestamp(6),
+        date timestamp(6) not null,
+        id bigint generated by default as identity,
+        tour_id bigint not null,
+        updated_at timestamp(6),
+        comment TEXT,
+        primary key (id)
+    )
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tours (
+        distance float(53),
+        estimated_time integer,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        description TEXT,
+        from_location varchar(255) not null,
+        name varchar(255) not null,
+        route_image_path varchar(255),
+        to_location varchar(255) not null,
+        transport_type varchar(255) not null,
+        primary key (id)
+    )
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       add constraint FKjv0inmm9mr1w8axyxa2h3ya14 
+       foreign key (tour_id) 
+       references tours
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:27:53 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       drop constraint if exists FKjv0inmm9mr1w8axyxa2h3ya14
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tour_logs cascade
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tours cascade
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tour_logs (
+        difficulty integer not null check ((difficulty<=10) and (difficulty>=1)),
+        rating integer not null check ((rating>=1) and (rating<=5)),
+        total_distance float(53) not null,
+        total_time integer not null,
+        created_at timestamp(6),
+        date timestamp(6) not null,
+        id bigint generated by default as identity,
+        tour_id bigint not null,
+        updated_at timestamp(6),
+        comment TEXT,
+        primary key (id)
+    )
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tours (
+        distance float(53),
+        estimated_time integer,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        description TEXT,
+        from_location varchar(255) not null,
+        name varchar(255) not null,
+        route_image_path varchar(255),
+        to_location varchar(255) not null,
+        transport_type varchar(255) not null,
+        primary key (id)
+    )
+2025-05-27 23:27:53 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       add constraint FKjv0inmm9mr1w8axyxa2h3ya14 
+       foreign key (tour_id) 
+       references tours
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:27:53 [restartedMain] INFO  o.e.t.service.RouteService - RouteService initialized
+2025-05-27 23:27:53 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-27 23:27:53 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Started TourplannerBackendApplication in 0.75 seconds (process running for 11430.452)
+2025-05-27 23:27:53 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-27 23:27:54 [restartedMain] INFO  o.e.t.service.RouteService - RouteService initialized
+2025-05-27 23:27:54 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-27 23:27:54 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-05-27 23:27:54 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-05-27 23:27:54 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-27 23:27:54 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:27:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2025-05-27 23:27:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       drop constraint if exists FKjv0inmm9mr1w8axyxa2h3ya14
+2025-05-27 23:27:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tour_logs cascade
+2025-05-27 23:27:54 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tours cascade
+2025-05-27 23:27:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-27 23:27:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-27 23:27:54 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-27 23:27:54 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-27 23:28:52 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 23:28:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-27 23:28:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2025-05-27 23:28:52 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:28:52 [http-nio-8080-exec-1] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:28:52 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:28:52 [http-nio-8080-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42P01
+2025-05-27 23:28:52 [http-nio-8080-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: relation "tours" does not exist
+  Position: 192
+2025-05-27 23:28:52 [http-nio-8080-exec-1] ERROR o.e.t.e.GlobalExceptionHandler - Unexpected error: JDBC exception executing SQL [select t1_0.id,t1_0.created_at,t1_0.description,t1_0.distance,t1_0.estimated_time,t1_0.from_location,t1_0.name,t1_0.route_image_path,t1_0.to_location,t1_0.transport_type,t1_0.updated_at from tours t1_0] [ERROR: relation "tours" does not exist
+  Position: 192] [n/a]; SQL [n/a]
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select t1_0.id,t1_0.created_at,t1_0.description,t1_0.distance,t1_0.estimated_time,t1_0.from_location,t1_0.name,t1_0.route_image_path,t1_0.to_location,t1_0.transport_type,t1_0.updated_at from tours t1_0] [ERROR: relation "tours" does not exist
+  Position: 192] [n/a]; SQL [n/a]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:281) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560) ~[spring-orm-6.2.7.jar:6.2.7]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.2.7.jar:6.2.7]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343) ~[spring-tx-6.2.7.jar:6.2.7]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160) ~[spring-tx-6.2.7.jar:6.2.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.5.0.jar:3.5.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.7.jar:6.2.7]
+	at jdk.proxy5/jdk.proxy5.$Proxy191.findAll(Unknown Source) ~[na:na]
+	at org.example.tourplannerbackend.service.TourService.getAllTours(TourService.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.7.jar:6.2.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.7.jar:6.2.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.example.tourplannerbackend.service.TourService$$SpringCGLIB$$0.getAllTours(<generated>) ~[classes/:na]
+	at org.example.tourplannerbackend.controller.TourController.getAllTours(TourController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.41.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.41.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select t1_0.id,t1_0.created_at,t1_0.description,t1_0.distance,t1_0.estimated_time,t1_0.from_location,t1_0.name,t1_0.route_image_path,t1_0.to_location,t1_0.transport_type,t1_0.updated_at from tours t1_0] [ERROR: relation "tours" does not exist
+  Position: 192] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:268) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:171) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.<init>(JdbcValuesResultSetImpl.java:74) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:355) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:137) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$1(ConcreteSqmSelectQueryPlan.java:152) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:442) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:362) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:380) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:143) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:120) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:402) ~[spring-data-jpa-3.5.0.jar:3.5.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.5.0.jar:3.5.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.7.jar:6.2.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.7.jar:6.2.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.7.jar:6.2.7]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.7.jar:6.2.7]
+	... 69 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "tours" does not exist
+  Position: 192
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137) ~[postgresql-42.7.5.jar:42.7.5]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-6.3.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.0.jar:na]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:250) ~[hibernate-core-6.6.15.Final.jar:6.6.15.Final]
+	... 102 common frames omitted
+2025-05-27 23:28:52 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select t1_0.id,t1_0.created_at,t1_0.description,t1_0.distance,t1_0.estimated_time,t1_0.from_location,t1_0.name,t1_0.route_image_path,t1_0.to_location,t1_0.transport_type,t1_0.updated_at from tours t1_0] [ERROR: relation "tours" does not exist<EOL>  Position: 192] [n/a]; SQL [n/a]]
+2025-05-27 23:29:06 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Starting TourplannerBackendApplication using Java 22.0.2 with PID 21186 (/Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend/target/classes started by mo in /Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend)
+2025-05-27 23:29:06 [restartedMain] DEBUG o.e.t.TourplannerBackendApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-05-27 23:29:06 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 23:29:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-27 23:29:06 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-27 23:29:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-27 23:29:06 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2025-05-27 23:29:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-27 23:29:06 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 23:29:06 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-05-27 23:29:06 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 23:29:06 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 571 ms
+2025-05-27 23:29:06 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-27 23:29:06 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-27 23:29:06 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-27 23:29:07 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-27 23:29:07 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-27 23:29:07 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43d4a174
+2025-05-27 23:29:07 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-27 23:29:07 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-27 23:29:07 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-27 23:29:07 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-27 23:29:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2025-05-27 23:29:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       drop constraint if exists FKjv0inmm9mr1w8axyxa2h3ya14
+2025-05-27 23:29:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tour_logs cascade
+2025-05-27 23:29:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tours cascade
+2025-05-27 23:29:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tour_logs (
+        difficulty integer not null check ((difficulty<=10) and (difficulty>=1)),
+        rating integer not null check ((rating>=1) and (rating<=5)),
+        total_distance float(53) not null,
+        total_time integer not null,
+        created_at timestamp(6),
+        date timestamp(6) not null,
+        id bigint generated by default as identity,
+        tour_id bigint not null,
+        updated_at timestamp(6),
+        comment TEXT,
+        primary key (id)
+    )
+2025-05-27 23:29:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tours (
+        distance float(53),
+        estimated_time integer,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        description TEXT,
+        from_location varchar(255) not null,
+        name varchar(255) not null,
+        route_image_path varchar(255),
+        to_location varchar(255) not null,
+        transport_type varchar(255) not null,
+        primary key (id)
+    )
+2025-05-27 23:29:07 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       add constraint FKjv0inmm9mr1w8axyxa2h3ya14 
+       foreign key (tour_id) 
+       references tours
+2025-05-27 23:29:07 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:29:07 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-27 23:29:08 [restartedMain] INFO  o.e.t.service.RouteService - RouteService initialized
+2025-05-27 23:29:08 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-27 23:29:08 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-05-27 23:29:08 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-05-27 23:29:08 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-27 23:29:08 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:29:08 [restartedMain] DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2025-05-27 23:29:08 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       drop constraint if exists FKjv0inmm9mr1w8axyxa2h3ya14
+2025-05-27 23:29:08 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tour_logs cascade
+2025-05-27 23:29:08 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tours cascade
+2025-05-27 23:29:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-27 23:29:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-27 23:29:08 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-27 23:29:08 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-27 23:30:23 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Starting TourplannerBackendApplication using Java 22.0.2 with PID 21219 (/Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend/target/classes started by mo in /Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend)
+2025-05-27 23:30:23 [restartedMain] DEBUG o.e.t.TourplannerBackendApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-05-27 23:30:23 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 23:30:23 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-27 23:30:23 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-27 23:30:23 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-27 23:30:23 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2025-05-27 23:30:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-27 23:30:24 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 23:30:24 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-05-27 23:30:24 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 23:30:24 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 686 ms
+2025-05-27 23:30:24 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-27 23:30:24 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-27 23:30:24 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-27 23:30:24 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-27 23:30:24 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-27 23:30:24 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@791d36b3
+2025-05-27 23:30:24 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-27 23:30:24 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-27 23:30:24 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-27 23:30:24 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-27 23:30:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2025-05-27 23:30:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       drop constraint if exists FKjv0inmm9mr1w8axyxa2h3ya14
+2025-05-27 23:30:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tour_logs cascade
+2025-05-27 23:30:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    drop table if exists tours cascade
+2025-05-27 23:30:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tour_logs (
+        difficulty integer not null check ((difficulty<=10) and (difficulty>=1)),
+        rating integer not null check ((rating>=1) and (rating<=5)),
+        total_distance float(53) not null,
+        total_time integer not null,
+        created_at timestamp(6),
+        date timestamp(6) not null,
+        id bigint generated by default as identity,
+        tour_id bigint not null,
+        updated_at timestamp(6),
+        comment TEXT,
+        primary key (id)
+    )
+2025-05-27 23:30:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tours (
+        distance float(53),
+        estimated_time integer,
+        created_at timestamp(6),
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        description TEXT,
+        from_location varchar(255) not null,
+        name varchar(255) not null,
+        route_image_path varchar(255),
+        to_location varchar(255) not null,
+        transport_type varchar(255) not null,
+        primary key (id)
+    )
+2025-05-27 23:30:24 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       add constraint FKjv0inmm9mr1w8axyxa2h3ya14 
+       foreign key (tour_id) 
+       references tours
+2025-05-27 23:30:24 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:30:25 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-27 23:30:25 [restartedMain] INFO  o.e.t.service.RouteService - RouteService initialized
+2025-05-27 23:30:25 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-27 23:30:25 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-27 23:30:25 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-05-27 23:30:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-27 23:30:25 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Started TourplannerBackendApplication in 2.805 seconds (process running for 3.214)
+2025-05-27 23:30:26 [RMI TCP Connection(4)-10.0.0.220] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 23:30:26 [RMI TCP Connection(4)-10.0.0.220] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-27 23:30:26 [RMI TCP Connection(4)-10.0.0.220] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-27 23:30:46 [http-nio-8080-exec-1] INFO  o.e.t.controller.RouteController - POST /api/routes/calculate - Calculating route from Vienna to Amsterdam using Car
+2025-05-27 23:30:46 [http-nio-8080-exec-1] INFO  o.e.t.service.RouteService - Calculating route for tour: null from Vienna to Amsterdam
+2025-05-27 23:30:46 [http-nio-8080-exec-1] DEBUG o.e.t.service.RouteService - Geocoded Vienna to coordinates: [16.348388, 48.198674]
+2025-05-27 23:30:46 [http-nio-8080-exec-1] DEBUG o.e.t.service.RouteService - Geocoded Amsterdam to coordinates: [4.89973, 52.37243]
+2025-05-27 23:30:46 [http-nio-8080-exec-1] DEBUG o.e.t.service.RouteService - Request body: {"coordinates":[[16.348388,48.198674],[4.89973,52.37243]]}
+2025-05-27 23:30:53 [http-nio-8080-exec-1] ERROR o.e.t.service.RouteService - Error generating route image: Server returned HTTP response code: 403 for URL: https://tile.openstreetmap.org/5/16/10.png
+2025-05-27 23:30:53 [http-nio-8080-exec-1] INFO  o.e.t.service.RouteService - Route calculation successful: distance=1143.0211000000002km, time=622min
+2025-05-27 23:30:56 [http-nio-8080-exec-2] INFO  o.e.t.controller.TourController - POST /api/tours - Creating new tour: Vienna to Amsterdam
+2025-05-27 23:30:56 [http-nio-8080-exec-2] INFO  o.e.t.service.TourService - Creating new tour: Vienna to Amsterdam
+2025-05-27 23:30:56 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        tours
+        (created_at, description, distance, estimated_time, from_location, name, route_image_path, to_location, transport_type, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-05-27 23:30:56 [http-nio-8080-exec-2] INFO  o.e.t.service.TourService - Tour created with ID: 1
+2025-05-27 23:33:57 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-27 23:33:57 [Thread-5] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-27 23:33:57 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-27 23:33:57 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:33:57 [Thread-5] DEBUG org.hibernate.SQL - 
+    set client_min_messages = WARNING
+2025-05-27 23:33:57 [Thread-5] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       drop constraint if exists FKjv0inmm9mr1w8axyxa2h3ya14
+2025-05-27 23:33:57 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists tour_logs cascade
+2025-05-27 23:33:57 [Thread-5] DEBUG org.hibernate.SQL - 
+    drop table if exists tours cascade
+2025-05-27 23:33:57 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-27 23:33:57 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-27 23:33:57 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Starting TourplannerBackendApplication using Java 22.0.2 with PID 21219 (/Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend/target/classes started by mo in /Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend)
+2025-05-27 23:33:57 [restartedMain] DEBUG o.e.t.TourplannerBackendApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-05-27 23:33:57 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 23:33:57 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-27 23:33:57 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2025-05-27 23:33:58 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-27 23:33:58 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 23:33:58 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-05-27 23:33:58 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 23:33:58 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 214 ms
+2025-05-27 23:33:58 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-27 23:33:58 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-27 23:33:58 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-27 23:33:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-05-27 23:33:58 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@21ba35f1
+2025-05-27 23:33:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-05-27 23:33:58 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-27 23:33:58 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-27 23:33:58 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-27 23:33:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tour_logs (
+        id bigint generated by default as identity,
+        comment TEXT,
+        created_at timestamp(6),
+        date timestamp(6) not null,
+        difficulty integer not null check ((difficulty<=10) and (difficulty>=1)),
+        rating integer not null check ((rating>=1) and (rating<=5)),
+        total_distance float(53) not null,
+        total_time integer not null,
+        updated_at timestamp(6),
+        tour_id bigint not null,
+        primary key (id)
+    )
+2025-05-27 23:33:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    create table tours (
+        id bigint generated by default as identity,
+        created_at timestamp(6),
+        description TEXT,
+        distance float(53),
+        estimated_time integer,
+        from_location varchar(255) not null,
+        name varchar(255) not null,
+        route_image_path varchar(255),
+        to_location varchar(255) not null,
+        transport_type varchar(255) not null,
+        updated_at timestamp(6),
+        primary key (id)
+    )
+2025-05-27 23:33:58 [restartedMain] DEBUG org.hibernate.SQL - 
+    alter table if exists tour_logs 
+       add constraint FKjv0inmm9mr1w8axyxa2h3ya14 
+       foreign key (tour_id) 
+       references tours
+2025-05-27 23:33:58 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:33:58 [restartedMain] INFO  o.e.t.service.RouteService - RouteService initialized
+2025-05-27 23:33:58 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-27 23:33:58 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-27 23:33:58 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-05-27 23:33:58 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-27 23:33:58 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Started TourplannerBackendApplication in 0.535 seconds (process running for 215.64)
+2025-05-27 23:33:58 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-05-27 23:35:09 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-27 23:35:09 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-27 23:35:09 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:35:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-05-27 23:35:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-05-27 23:35:10 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Starting TourplannerBackendApplication using Java 22.0.2 with PID 21330 (/Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend/target/classes started by mo in /Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend)
+2025-05-27 23:35:10 [restartedMain] DEBUG o.e.t.TourplannerBackendApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-05-27 23:35:10 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 23:35:10 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-27 23:35:10 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-27 23:35:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-27 23:35:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2025-05-27 23:35:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-27 23:35:11 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 23:35:11 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-05-27 23:35:11 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 23:35:11 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 617 ms
+2025-05-27 23:35:11 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-27 23:35:11 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-27 23:35:11 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-27 23:35:11 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-27 23:35:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-27 23:35:11 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1c14de45
+2025-05-27 23:35:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-27 23:35:11 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-27 23:35:11 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-27 23:35:11 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-27 23:35:12 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:35:12 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-27 23:35:12 [restartedMain] INFO  o.e.t.service.RouteService - RouteService initialized
+2025-05-27 23:35:12 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-27 23:35:12 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-27 23:35:12 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-05-27 23:35:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-27 23:35:13 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Started TourplannerBackendApplication in 2.71 seconds (process running for 3.06)
+2025-05-27 23:35:13 [RMI TCP Connection(4)-10.0.0.220] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 23:35:13 [RMI TCP Connection(4)-10.0.0.220] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-27 23:35:13 [RMI TCP Connection(4)-10.0.0.220] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-27 23:35:28 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:35:28 [http-nio-8080-exec-1] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:35:28 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:35:28 [http-nio-8080-exec-1] INFO  o.e.t.service.TourService - Found 0 tours
+2025-05-27 23:35:43 [http-nio-8080-exec-2] INFO  o.e.t.controller.RouteController - POST /api/routes/calculate - Calculating route from Amsterdam to Wien using Car
+2025-05-27 23:35:43 [http-nio-8080-exec-2] INFO  o.e.t.service.RouteService - Calculating route for tour: null from Amsterdam to Wien
+2025-05-27 23:35:44 [http-nio-8080-exec-2] DEBUG o.e.t.service.RouteService - Geocoded Amsterdam to coordinates: [4.89973, 52.37243]
+2025-05-27 23:35:44 [http-nio-8080-exec-2] DEBUG o.e.t.service.RouteService - Geocoded Wien to coordinates: [16.348388, 48.198674]
+2025-05-27 23:35:44 [http-nio-8080-exec-2] DEBUG o.e.t.service.RouteService - Request body: {"coordinates":[[4.89973,52.37243],[16.348388,48.198674]]}
+2025-05-27 23:35:51 [http-nio-8080-exec-2] ERROR o.e.t.service.RouteService - Error generating route image: Server returned HTTP response code: 403 for URL: https://tile.openstreetmap.org/5/16/10.png
+2025-05-27 23:35:51 [http-nio-8080-exec-2] INFO  o.e.t.service.RouteService - Route calculation successful: distance=1142.4498km, time=627min
+2025-05-27 23:35:53 [http-nio-8080-exec-3] INFO  o.e.t.controller.TourController - POST /api/tours - Creating new tour: Amsterdam to Vienna
+2025-05-27 23:35:53 [http-nio-8080-exec-3] INFO  o.e.t.service.TourService - Creating new tour: Amsterdam to Vienna
+2025-05-27 23:35:53 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        tours
+        (created_at, description, distance, estimated_time, from_location, name, route_image_path, to_location, transport_type, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-05-27 23:35:53 [http-nio-8080-exec-3] INFO  o.e.t.service.TourService - Tour created with ID: 1
+2025-05-27 23:36:28 [http-nio-8080-exec-4] INFO  o.e.t.controller.TourController - GET /api/tours/search?q=a - Searching tours
+2025-05-27 23:36:28 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Searching tours with term: 'a'
+2025-05-27 23:36:28 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        distinct t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    left join
+        tour_logs tl1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        lower(t1_0.name) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.description) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.from_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.to_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.transport_type) like lower(('%'||?||'%')) escape '' 
+        or lower(tl1_0.comment) like lower(('%'||?||'%')) escape '' 
+        or cast(t1_0.distance as text) like ('%'||?||'%') escape '' 
+        or cast(t1_0.estimated_time as text) like ('%'||?||'%') escape '' 
+        or cast((select
+            count(*) 
+        from
+            tour_logs tl2_0 
+        where
+            t1_0.id=tl2_0.tour_id) as text) like ('%'||?||'%') escape ''
+2025-05-27 23:36:28 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Found 1 tours matching search term
+2025-05-27 23:36:28 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:36:28 [http-nio-8080-exec-5] INFO  o.e.t.controller.TourController - GET /api/tours/search?q=am - Searching tours
+2025-05-27 23:36:28 [http-nio-8080-exec-5] INFO  o.e.t.service.TourService - Searching tours with term: 'am'
+2025-05-27 23:36:28 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        distinct t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    left join
+        tour_logs tl1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        lower(t1_0.name) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.description) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.from_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.to_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.transport_type) like lower(('%'||?||'%')) escape '' 
+        or lower(tl1_0.comment) like lower(('%'||?||'%')) escape '' 
+        or cast(t1_0.distance as text) like ('%'||?||'%') escape '' 
+        or cast(t1_0.estimated_time as text) like ('%'||?||'%') escape '' 
+        or cast((select
+            count(*) 
+        from
+            tour_logs tl2_0 
+        where
+            t1_0.id=tl2_0.tour_id) as text) like ('%'||?||'%') escape ''
+2025-05-27 23:36:28 [http-nio-8080-exec-5] INFO  o.e.t.service.TourService - Found 1 tours matching search term
+2025-05-27 23:36:28 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:36:30 [http-nio-8080-exec-6] INFO  o.e.t.controller.TourController - GET /api/tours/search?q=amster - Searching tours
+2025-05-27 23:36:30 [http-nio-8080-exec-6] INFO  o.e.t.service.TourService - Searching tours with term: 'amster'
+2025-05-27 23:36:30 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        distinct t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    left join
+        tour_logs tl1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        lower(t1_0.name) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.description) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.from_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.to_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.transport_type) like lower(('%'||?||'%')) escape '' 
+        or lower(tl1_0.comment) like lower(('%'||?||'%')) escape '' 
+        or cast(t1_0.distance as text) like ('%'||?||'%') escape '' 
+        or cast(t1_0.estimated_time as text) like ('%'||?||'%') escape '' 
+        or cast((select
+            count(*) 
+        from
+            tour_logs tl2_0 
+        where
+            t1_0.id=tl2_0.tour_id) as text) like ('%'||?||'%') escape ''
+2025-05-27 23:36:30 [http-nio-8080-exec-6] INFO  o.e.t.service.TourService - Found 1 tours matching search term
+2025-05-27 23:36:30 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:36:34 [http-nio-8080-exec-7] INFO  o.e.t.controller.TourController - GET /api/tours/search?q=amste - Searching tours
+2025-05-27 23:36:34 [http-nio-8080-exec-7] INFO  o.e.t.service.TourService - Searching tours with term: 'amste'
+2025-05-27 23:36:34 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        distinct t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    left join
+        tour_logs tl1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        lower(t1_0.name) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.description) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.from_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.to_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.transport_type) like lower(('%'||?||'%')) escape '' 
+        or lower(tl1_0.comment) like lower(('%'||?||'%')) escape '' 
+        or cast(t1_0.distance as text) like ('%'||?||'%') escape '' 
+        or cast(t1_0.estimated_time as text) like ('%'||?||'%') escape '' 
+        or cast((select
+            count(*) 
+        from
+            tour_logs tl2_0 
+        where
+            t1_0.id=tl2_0.tour_id) as text) like ('%'||?||'%') escape ''
+2025-05-27 23:36:34 [http-nio-8080-exec-7] INFO  o.e.t.service.TourService - Found 1 tours matching search term
+2025-05-27 23:36:34 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:36:46 [http-nio-8080-exec-8] INFO  o.e.t.controller.RouteController - POST /api/routes/calculate - Calculating route from Berlin to Vienna using Car
+2025-05-27 23:36:46 [http-nio-8080-exec-8] INFO  o.e.t.service.RouteService - Calculating route for tour: null from Berlin to Vienna
+2025-05-27 23:36:50 [http-nio-8080-exec-8] DEBUG o.e.t.service.RouteService - Geocoded Berlin to coordinates: [13.407032, 52.524932]
+2025-05-27 23:36:50 [http-nio-8080-exec-8] DEBUG o.e.t.service.RouteService - Geocoded Vienna to coordinates: [16.348388, 48.198674]
+2025-05-27 23:36:50 [http-nio-8080-exec-8] DEBUG o.e.t.service.RouteService - Request body: {"coordinates":[[13.407032,52.524932],[16.348388,48.198674]]}
+2025-05-27 23:36:50 [http-nio-8080-exec-9] INFO  o.e.t.controller.TourController - POST /api/tours - Creating new tour: Berlin to Vienna
+2025-05-27 23:36:50 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Creating new tour: Berlin to Vienna
+2025-05-27 23:36:50 [http-nio-8080-exec-9] INFO  o.e.t.service.RouteService - Calculating route for tour: Berlin to Vienna from Berlin to Vienna
+2025-05-27 23:36:51 [http-nio-8080-exec-9] DEBUG o.e.t.service.RouteService - Geocoded Berlin to coordinates: [13.407032, 52.524932]
+2025-05-27 23:36:51 [http-nio-8080-exec-9] DEBUG o.e.t.service.RouteService - Geocoded Vienna to coordinates: [16.348388, 48.198674]
+2025-05-27 23:36:51 [http-nio-8080-exec-9] DEBUG o.e.t.service.RouteService - Request body: {"coordinates":[[13.407032,52.524932],[16.348388,48.198674]]}
+2025-05-27 23:36:57 [http-nio-8080-exec-8] ERROR o.e.t.service.RouteService - Error generating route image: Server returned HTTP response code: 403 for URL: https://tile.openstreetmap.org/9/277/172.png
+2025-05-27 23:36:57 [http-nio-8080-exec-8] INFO  o.e.t.service.RouteService - Route calculation successful: distance=687.9317km, time=459min
+2025-05-27 23:36:57 [http-nio-8080-exec-9] ERROR o.e.t.service.RouteService - Error generating route image: Server returned HTTP response code: 403 for URL: https://tile.openstreetmap.org/9/277/172.png
+2025-05-27 23:36:57 [http-nio-8080-exec-9] INFO  o.e.t.service.RouteService - Route calculation successful: distance=687.9317km, time=459min
+2025-05-27 23:36:57 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        tours
+        (created_at, description, distance, estimated_time, from_location, name, route_image_path, to_location, transport_type, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-05-27 23:36:57 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Tour created with ID: 2
+2025-05-27 23:37:24 [http-nio-8080-exec-2] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:37:24 [http-nio-8080-exec-2] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:37:24 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:37:24 [http-nio-8080-exec-2] INFO  o.e.t.service.TourService - Found 2 tours
+2025-05-27 23:37:24 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:37:24 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:37:24 [http-nio-8080-exec-3] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:37:24 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:37:24 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:37:24 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:37:24 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:37:24 [http-nio-8080-exec-4] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:37:24 [http-nio-8080-exec-4] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:37:24 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:37:24 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:37:24 [http-nio-8080-exec-4] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:37:42 [http-nio-8080-exec-5] INFO  o.e.t.controller.TourController - GET /api/tours/search?q=ams - Searching tours
+2025-05-27 23:37:42 [http-nio-8080-exec-5] INFO  o.e.t.service.TourService - Searching tours with term: 'ams'
+2025-05-27 23:37:42 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        distinct t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    left join
+        tour_logs tl1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        lower(t1_0.name) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.description) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.from_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.to_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.transport_type) like lower(('%'||?||'%')) escape '' 
+        or lower(tl1_0.comment) like lower(('%'||?||'%')) escape '' 
+        or cast(t1_0.distance as text) like ('%'||?||'%') escape '' 
+        or cast(t1_0.estimated_time as text) like ('%'||?||'%') escape '' 
+        or cast((select
+            count(*) 
+        from
+            tour_logs tl2_0 
+        where
+            t1_0.id=tl2_0.tour_id) as text) like ('%'||?||'%') escape ''
+2025-05-27 23:37:42 [http-nio-8080-exec-5] INFO  o.e.t.service.TourService - Found 1 tours matching search term
+2025-05-27 23:37:42 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:37:44 [http-nio-8080-exec-6] INFO  o.e.t.controller.TourController - GET /api/tours/search?q=ber - Searching tours
+2025-05-27 23:37:44 [http-nio-8080-exec-6] INFO  o.e.t.service.TourService - Searching tours with term: 'ber'
+2025-05-27 23:37:44 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        distinct t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0 
+    left join
+        tour_logs tl1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        lower(t1_0.name) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.description) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.from_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.to_location) like lower(('%'||?||'%')) escape '' 
+        or lower(t1_0.transport_type) like lower(('%'||?||'%')) escape '' 
+        or lower(tl1_0.comment) like lower(('%'||?||'%')) escape '' 
+        or cast(t1_0.distance as text) like ('%'||?||'%') escape '' 
+        or cast(t1_0.estimated_time as text) like ('%'||?||'%') escape '' 
+        or cast((select
+            count(*) 
+        from
+            tour_logs tl2_0 
+        where
+            t1_0.id=tl2_0.tour_id) as text) like ('%'||?||'%') escape ''
+2025-05-27 23:37:44 [http-nio-8080-exec-6] INFO  o.e.t.service.TourService - Found 1 tours matching search term
+2025-05-27 23:37:44 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:37:55 [http-nio-8080-exec-9] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:37:55 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:37:55 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:37:55 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Found 2 tours
+2025-05-27 23:37:55 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:37:55 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:37:55 [http-nio-8080-exec-10] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:37:55 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:37:55 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:37:55 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:37:55 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:37:55 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:37:55 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:37:55 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:37:55 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:37:55 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:38:08 [http-nio-8080-exec-4] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:38:08 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:38:08 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:38:08 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Found 2 tours
+2025-05-27 23:38:08 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:38:08 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:38:08 [http-nio-8080-exec-5] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:38:08 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:38:08 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:38:08 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:38:08 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:38:08 [http-nio-8080-exec-6] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:38:08 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:38:08 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:38:08 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:38:08 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:38:31 [http-nio-8080-exec-9] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:38:31 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:38:31 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:38:31 [http-nio-8080-exec-9] INFO  o.e.t.service.TourService - Found 2 tours
+2025-05-27 23:38:31 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:38:31 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:38:32 [http-nio-8080-exec-10] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:38:32 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:38:32 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:38:32 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:38:32 [http-nio-8080-exec-10] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:38:32 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:38:32 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:38:32 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:38:32 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:38:32 [http-nio-8080-exec-1] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:39:12 [http-nio-8080-exec-4] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:39:12 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:39:12 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:39:12 [http-nio-8080-exec-4] INFO  o.e.t.service.TourService - Found 2 tours
+2025-05-27 23:39:12 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:39:12 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:39:13 [http-nio-8080-exec-5] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:39:13 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:39:13 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:39:13 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:39:13 [http-nio-8080-exec-5] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:39:13 [http-nio-8080-exec-6] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:39:13 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:39:13 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:39:13 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:39:13 [http-nio-8080-exec-6] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
+2025-05-27 23:40:22 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-27 23:40:22 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-05-27 23:40:22 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:40:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-27 23:40:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-27 23:40:24 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Starting TourplannerBackendApplication using Java 22.0.2 with PID 21542 (/Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend/target/classes started by mo in /Users/mo/Desktop/UNI/SEM4/Swen2/TourplannerBackend)
+2025-05-27 23:40:24 [restartedMain] DEBUG o.e.t.TourplannerBackendApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-05-27 23:40:24 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-27 23:40:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-27 23:40:24 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-27 23:40:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-27 23:40:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2025-05-27 23:40:24 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-27 23:40:24 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-27 23:40:24 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-05-27 23:40:24 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-27 23:40:24 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 628 ms
+2025-05-27 23:40:24 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-27 23:40:24 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-05-27 23:40:24 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-27 23:40:25 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-27 23:40:25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-27 23:40:25 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6cfd1a09
+2025-05-27 23:40:25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-27 23:40:25 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-27 23:40:25 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-27 23:40:25 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-27 23:40:25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-27 23:40:25 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-27 23:40:26 [restartedMain] INFO  o.e.t.service.RouteService - RouteService initialized
+2025-05-27 23:40:26 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-27 23:40:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-05-27 23:40:26 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2025-05-27 23:40:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-27 23:40:26 [restartedMain] INFO  o.e.t.TourplannerBackendApplication - Started TourplannerBackendApplication in 2.699 seconds (process running for 3.025)
+2025-05-27 23:40:26 [RMI TCP Connection(2)-10.0.0.220] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-27 23:40:26 [RMI TCP Connection(2)-10.0.0.220] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-27 23:40:26 [RMI TCP Connection(2)-10.0.0.220] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-27 23:40:39 [http-nio-8080-exec-1] INFO  o.e.t.controller.TourController - GET /api/tours - Getting all tours
+2025-05-27 23:40:39 [http-nio-8080-exec-1] INFO  o.e.t.service.TourService - Fetching all tours
+2025-05-27 23:40:39 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.description,
+        t1_0.distance,
+        t1_0.estimated_time,
+        t1_0.from_location,
+        t1_0.name,
+        t1_0.route_image_path,
+        t1_0.to_location,
+        t1_0.transport_type,
+        t1_0.updated_at 
+    from
+        tours t1_0
+2025-05-27 23:40:39 [http-nio-8080-exec-1] INFO  o.e.t.service.TourService - Found 2 tours
+2025-05-27 23:40:39 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:40:39 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.tour_id,
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    where
+        tl1_0.tour_id=?
+2025-05-27 23:40:39 [http-nio-8080-exec-2] INFO  o.e.t.controller.TourLogController - GET /api/tours/1/logs - Getting logs for tour
+2025-05-27 23:40:39 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 1
+2025-05-27 23:40:39 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:40:39 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:40:39 [http-nio-8080-exec-2] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 1
+2025-05-27 23:40:39 [http-nio-8080-exec-3] INFO  o.e.t.controller.TourLogController - GET /api/tours/2/logs - Getting logs for tour
+2025-05-27 23:40:39 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Fetching logs for tour ID: 2
+2025-05-27 23:40:39 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        tours t1_0 
+    where
+        t1_0.id=?
+2025-05-27 23:40:39 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tl1_0.id,
+        tl1_0.comment,
+        tl1_0.created_at,
+        tl1_0.date,
+        tl1_0.difficulty,
+        tl1_0.rating,
+        tl1_0.total_distance,
+        tl1_0.total_time,
+        tl1_0.tour_id,
+        tl1_0.updated_at 
+    from
+        tour_logs tl1_0 
+    left join
+        tours t1_0 
+            on t1_0.id=tl1_0.tour_id 
+    where
+        t1_0.id=? 
+    order by
+        tl1_0.date desc
+2025-05-27 23:40:39 [http-nio-8080-exec-3] INFO  o.e.t.service.TourLogService - Found 0 logs for tour 2
