@@ -30,7 +30,7 @@ public class RouteService {
     @Value("${ors.api.key:}")
     private String apiKey;
 
-    @Value("${ors.api.url:https://api.openrouteservice.org/v2}")
+    @Value("${ors.api.url:https://api.openrouteservice.org}")
     private String baseUrl;
 
     @Value("${osm.tile.url:https://tile.openstreetmap.org}")
@@ -123,7 +123,7 @@ public class RouteService {
     }
 
     /**
-     * Geocode location to coordinates
+     * Geocode location to coordinates using correct Pelias endpoint
      */
     private double[] geocode(String location) {
         try {
@@ -131,8 +131,9 @@ public class RouteService {
                 return null;
             }
 
-            String url = String.format("%s/geocode/search?api_key=%s&text=%s",
-                    baseUrl, apiKey, location);
+            // FIXED: Correct geocoding endpoint (Pelias-based)
+            String url = String.format("%s/geocode/search?api_key=%s&text=%s&size=1",
+                    baseUrl, apiKey, java.net.URLEncoder.encode(location, "UTF-8"));
 
             HttpHeaders headers = new HttpHeaders();
             headers.set("Accept", "application/json");
@@ -150,8 +151,14 @@ public class RouteService {
                     double longitude = coordinates.get(0).asDouble();
                     double latitude = coordinates.get(1).asDouble();
 
-                    log.debug("Geocoded {} to coordinates: [{}, {}]", location, longitude, latitude);
-                    return new double[]{longitude, latitude};
+                    // Validate coordinates
+                    if (longitude >= -180 && longitude <= 180 && latitude >= -90 && latitude <= 90) {
+                        log.debug("Geocoded {} to coordinates: [{}, {}]", location, longitude, latitude);
+                        return new double[]{longitude, latitude};
+                    } else {
+                        log.warn("Invalid coordinates for location {}: [{}, {}]", location, longitude, latitude);
+                        return null;
+                    }
                 }
             }
 
@@ -165,7 +172,7 @@ public class RouteService {
     }
 
     /**
-     * Get directions between two points
+     * Get directions between two points using correct v2 endpoint
      */
     private RouteInfo getDirections(double[] startCoords, double[] endCoords, String transportType) {
         try {
@@ -174,15 +181,33 @@ public class RouteService {
             }
 
             String profile = mapTransportTypeToProfile(transportType);
-            String url = String.format("%s/directions/%s?api_key=%s&start=%.6f,%.6f&end=%.6f,%.6f",
-                    baseUrl, profile, apiKey,
-                    startCoords[0], startCoords[1], endCoords[0], endCoords[1]);
+
+            // FIXED: Correct directions endpoint with POST request and proper body
+            String url = String.format("%s/v2/directions/%s", baseUrl, profile);
+
+            // Create request body using ObjectMapper to avoid formatting issues
+            ObjectMapper mapper = new ObjectMapper();
+            double[][] coordinates = new double[][]{startCoords, endCoords};
+
+            String requestBody;
+            try {
+                requestBody = mapper.writeValueAsString(
+                        java.util.Map.of("coordinates", coordinates)
+                );
+                log.debug("Request body: {}", requestBody);
+            } catch (Exception e) {
+                log.error("Error creating request body: {}", e.getMessage());
+                return null;
+            }
 
             HttpHeaders headers = new HttpHeaders();
-            headers.set("Accept", "application/geo+json");
-            HttpEntity<String> entity = new HttpEntity<>(headers);
+            headers.set("Accept", "application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8");
+            headers.set("Content-Type", "application/json; charset=utf-8");
+            headers.set("Authorization", apiKey);
 
-            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+            HttpEntity<String> entity = new HttpEntity<>(requestBody, headers);
+
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
 
             if (response.getStatusCode().is2xxSuccessful()) {
                 return parseDirectionsResponse(response.getBody());
@@ -207,12 +232,11 @@ public class RouteService {
         try {
             JsonNode rootNode = objectMapper.readTree(responseBody);
 
-            if (rootNode.has("features") && rootNode.get("features").size() > 0) {
-                JsonNode route = rootNode.get("features").get(0);
-                JsonNode properties = route.get("properties");
+            if (rootNode.has("routes") && rootNode.get("routes").size() > 0) {
+                JsonNode route = rootNode.get("routes").get(0);
+                JsonNode summary = route.get("summary");
 
-                if (properties.has("summary")) {
-                    JsonNode summary = properties.get("summary");
+                if (summary != null) {
                     double distance = summary.get("distance").asDouble() / 1000; // Convert to km
                     int duration = (int) (summary.get("duration").asDouble() / 60); // Convert to minutes
 
